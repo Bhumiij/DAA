@@ -13,7 +13,7 @@ bool DFS(int node, int col, vector<int> &color, vector<vector<int> > &adj) {
 
     for (int it : adj[node]) {
         if (color[it] == -1) {
-            if (!DFS(nit, !col, color, adj))
+            if (!DFS(it, !col, color, adj))
                 return false;
         } 
 		else if (color[it] == col) {
